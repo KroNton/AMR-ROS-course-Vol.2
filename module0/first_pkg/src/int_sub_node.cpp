@@ -2,28 +2,24 @@
 #include "std_msgs/Int32.h"
 
 
-int input_num;
-
-
-ros::Subscriber int_sub;
-
-void int_Callback(const std_msgs::Int32::ConstPtr& msg)
+void int_Callback(const std_msgs::Int32::ConstPtr& int_msg)
 {
-  msg->data;
+  int count=int_msg->data;
+  
+  std::cout<<"intger_data: "<<count<<std::endl;
 }
 
 int main(int argc, char **argv)
 {
 
-  ros::init(argc, argv, "int_subscriber node");
+  ros::init(argc, argv, "integer_subscriber");
 
   ros::NodeHandle n;
 
- int_sub = n.subscribe("int_chatter", 1000, int_Callback);
 
-   
+  ros::Subscriber int_sub = n.subscribe("int_count", 1000, int_Callback);
+
   ros::spin();
-
 
   return 0;
 }
