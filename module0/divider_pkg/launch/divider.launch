@@ -1,0 +1,10 @@
+<launch>
+
+                    <!--integer publisher node  -->
+    <node name="integer_pub" pkg="first_pkg" type="int_pub_node" />
+
+                    <!-- divider node -->
+    <node name="divider_node" pkg="divider_pkg" type="divider_node" />
+
+
+ </launch>
