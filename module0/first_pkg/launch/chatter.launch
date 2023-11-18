@@ -1,0 +1,7 @@
+<launch>
+
+<include file="$(find first_pkg)/launch/publisher.launch" />
+<include file="$(find first_pkg)/launch/subscriber.launch" />
+
+
+</launch>
