@@ -25,11 +25,11 @@ int main(int argc, char **argv)
   {
 
  
-    int_pub.publish(int_msg);
+   
 
     int_msg.data=count;
 
-    
+     int_pub.publish(int_msg);
 
     
 

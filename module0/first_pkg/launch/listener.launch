@@ -1,8 +1,8 @@
 <launch>
 
 
-    <node name="talker" pkg="first_pkg" type="talker_node" />
     <node name="listener" pkg="first_pkg" type="listener_node" />
+
 
 
  </launch>
